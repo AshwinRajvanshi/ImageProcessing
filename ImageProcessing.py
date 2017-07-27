@@ -32,6 +32,7 @@ class MyGUI:
         name= askopenfilename() 
         print name
         img=cv2.imread(name) 
+        print"I got %d bytes from this file." % len(name)
         retval,threshold1=cv2.threshold(img,12,255,cv2.THRESH_BINARY)
         grayscaled=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
         retval2,threshold2=cv2.threshold(grayscaled,12,255,cv2.THRESH_BINARY)
